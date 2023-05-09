@@ -13,7 +13,7 @@ end
 case node['platform_family']
 when "debian"
 
-  package ["pkg-config", "zip", "g++", "zlib1g-dev", "unzip", "swig", "git", "build-essential", "cmake", "libopenblas-dev", "liblapack-dev", "linux-image-#{node['kernel']['release']}", "linux-headers-#{node['kernel']['release']}", "libcupti-dev", "libcurl3-dev", "pciutils"] do
+  package ["pkg-config", "zip", "g++", "zlib1g-dev", "unzip", "swig", "git", "build-essential", "cmake", "libopenblas-dev", "liblapack-dev", "linux-image-5.15.0-71-generic", "linux-headers-5.15.0-71-generic", "libcupti-dev", "libcurl3-dev", "pciutils"] do
     retries 10
     retry_delay 30
   end
